@@ -63,7 +63,7 @@ selected_semester = st.sidebar.selectbox('Select Semester:', merged_df['code_pre
 selected_student_id = st.sidebar.selectbox('Select Student ID:', merged_df['id_student'].unique())
 
 # Sidebar - Gender Selection
-selected_gender = st.sidebar.radio('Select Gender:', ['M', 'F'])
+selected_gender = st.sidebar.radio('Select Gender:', ['All','M', 'F'])
 
 # Filter the data based on selected semester, student id, and gender
 filtered_df = merged_df[(merged_df['code_presentation'] == selected_semester) &
