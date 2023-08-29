@@ -6,5 +6,5 @@ scipy
 plotly
 seaborn
 openpyxl
-ExtReact
 os
+
