@@ -1,10 +1,2 @@
-pandas
-numpy
-matplotlib
-scikit-learn
-scipy
-plotly
-seaborn
-openpyxl
-ExtReact
+
 
