@@ -11,13 +11,13 @@ import seaborn as sns
 import os
 import openpyxl
 
-data1 = pd.read_csv('D:/Profesional Certificate in Data Science UTM/Bismillah Capstone Project/PROJECT 2-WH/DATASET/assessments.csv')
-data2 = pd.read_csv('D:/Profesional Certificate in Data Science UTM/Bismillah Capstone Project/PROJECT 2-WH/DATASET/courses.csv')
+data1 = pd.read_csv('assessments.csv')
+data2 = pd.read_csv('courses.csv')
 
 import pandas as pd
 
 # Load your data into a DataFrame (assuming your data is stored in a CSV file)
-data3 = pd.read_csv('D:/Profesional Certificate in Data Science UTM/Bismillah Capstone Project/PROJECT 2-WH/DATASET/studentAssessment.csv')
+data3 = pd.read_csv('studentAssessment.csv')
 
 # Calculate statistics
 mean_score = data3['score'].mean()
@@ -33,7 +33,7 @@ data3['score'].fillna(chosen_statistic, inplace=True)
 import pandas as pd
 
 # Load your data into a DataFrame (assuming your data is stored in a CSV file)
-data4 = pd.read_csv('D:/Profesional Certificate in Data Science UTM/Bismillah Capstone Project/PROJECT 2-WH/DATASET/studentinfo.csv')
+data4 = pd.read_csv('studentInfo.csv')
 
 # Calculate the mode of 'imd_band'
 mode_imd_band = data4['imd_band'].mode()[0]  # mode() returns a Series, so we use [0] to get the first value
@@ -42,7 +42,7 @@ mode_imd_band = data4['imd_band'].mode()[0]  # mode() returns a Series, so we us
 data4['imd_band'].fillna(mode_imd_band, inplace=True)
 
 
-data5 = pd.read_csv('D:/Profesional Certificate in Data Science UTM/Bismillah Capstone Project/PROJECT 2-WH/DATASET/studentRegistration.csv')
+data5 = pd.read_csv('studentRegistration.csv')
 
 merged_df = pd.merge(data1, data2, on=['code_module','code_presentation'])
 merged_df = pd.merge(merged_df, data3, on='id_assessment')
