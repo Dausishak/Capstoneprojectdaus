@@ -63,7 +63,8 @@ from PIL import Image
 
 image = Image.open('UTMlogo.jpg')
 
-st.image(image, caption='Universiti Teknologi Malaysia')
+st.image(image, caption='Universiti Teknologi Malaysia',width=None, use_column_width=auto, clamp=False, channels="RGB", output_format="auto")
+
 
 selected_semester = st.sidebar.selectbox('Select Semester:', merged_df['code_presentation'].unique())
 
