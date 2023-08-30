@@ -83,17 +83,24 @@ if selected_gender != 'All':
 
 # Display the bar plot using Streamlit
 st.title('Registration Status by Code Presentation')
+
 st.write(f'Selected Semester: {selected_semester}')
+
 st.write(f'Selected Student ID: {selected_student_id}')
+
 st.write(f'Selected Gender: {selected_gender}')
+
 
 # Create a bar plot with the chosen color palette
 fig, ax = plt.subplots(figsize=(10, 6))
 filtered_df['code_presentation'].value_counts().sort_index().plot(kind='bar', ax=ax)
 
 plt.title('Number of Registrations')
+
 plt.xlabel('Code Presentation (Semester)')
+
 plt.ylabel('Number of Registrations')
+
 plt.xticks(rotation=45)
 
 st.pyplot(fig)
